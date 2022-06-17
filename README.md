@@ -53,7 +53,9 @@ public class SpawnManager : MonoBehaviour
         Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
     }
 }
+```
 ### DETECT COLLISION
+```python
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
