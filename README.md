@@ -1,26 +1,37 @@
-# Animal-Feeding-Phase-II
+# Animal Feeding Phase-II
 
 ## Aim:
-To develop a animal feeding game-Phase-2 using unity.
+To develop a animal feeding game Phase-2 using unity.
 ## Algorithm:
 ### Random Animal Stampede
-### Step 1: In the Hierarchy, create an Empty object called “SpawnManager”
-### Step 2: Create a new script called “SpawnManager”, drag the script and attach it to the Spawn Manager in the hierarchy , and open it
-### Step 3: Declare new public GameObject[ ] animalPrefabs;
-### Step 4: In the inspector assign the size as 3 , for each element drag the animals from prefabs folder into the array
+### Step 1: 
+In the Hierarchy, create an Empty object called “SpawnManager”
+### Step 2: 
+Create a new script called “SpawnManager”, drag the script and attach it to the Spawn Manager in the hierarchy , and open it
+### Step 3: 
+Declare new public GameObject[ ] animalPrefabs;
+### Step 4: 
+In the inspector assign the size as 3 , for each element drag the animals from prefabs folder into the array
 
 ### Collision Decisions
-### Step 1: Double-click on one of the animal prefabs, then Add Component > Box Collider
-### Step 2: Click Edit Collider, then drag the collider handles to encompass the object
-### Step 3: Check the “Is Trigger” checkbox
-### Step 4: Repeat this process for each of the animals and the projectile
-### Step 5: Add a RigidBody component to the (pizza)projectile and uncheck “use gravity”.
-### Step 6: Create a new DetectCollisions.cs script, then drag the scripts and add it to each animal prefab and pizza, then open it and check it.
-### Step 7: For all the animal prefabs and food in th inspector (below the  layer ) drop down the override option and choose apply all.
+### Step 1: 
+Double-click on one of the animal prefabs, then Add Component > Box Collider
+### Step 2: 
+Click Edit Collider, then drag the collider handles to encompass the object
+### Step 3: 
+Check the “Is Trigger” checkbox
+### Step 4: 
+Repeat this process for each of the animals and the projectile
+### Step 5: 
+Add a RigidBody component to the (pizza)projectile and uncheck “use gravity”.
+### Step 6: 
+Create a new DetectCollisions.cs script, then drag the scripts and add it to each animal prefab and pizza, then open it and check it.
+### Step 7: 
+For all the animal prefabs and food in th inspector (below the  layer ) drop down the override option and choose apply all.
 
 ## Program:
 ### SPAWN MANAGER
-```python
+```c#
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -53,9 +64,10 @@ public class SpawnManager : MonoBehaviour
         Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
     }
 }
+
 ```
 ### DETECT COLLISION
-```python
+```C#
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -79,11 +91,11 @@ public class DetectCollider : MonoBehaviour
         Destroy(other.gameObject);
     }
 }
-```
 
+```
 ## Output:
-![173235243-fbd83cb0-0991-4245-bc4c-05f3e8cf9096](https://user-images.githubusercontent.com/75235022/174343465-706e7b0f-cd51-4bac-a06d-20760f10fed3.png)
+![Screenshot (54)](https://user-images.githubusercontent.com/75235488/173235360-bd579ae8-dc6e-49e5-8430-74603c5c18fd.png)
 
 ## Result:
-Animal feeding game-Phase-2 using unity is developed successfully.
 
+Animal feeding game Phase-2 using unity is developed successfully.
